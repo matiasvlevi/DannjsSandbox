@@ -110,6 +110,7 @@ function XORtemplate() {
     + "}\n"
     + "\n"
     + "//Testing after training \n"
+    + "console.log('');\n"
     + "console.log('After Training');\n"
     + "for (data of dataset) {\n"
     + "  nn.feedForward(data.input,{log:true,decimals:3});\n"
