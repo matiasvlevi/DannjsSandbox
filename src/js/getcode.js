@@ -26,6 +26,24 @@ const func = "(" + (function () {
 
     }
 
+    console.table = function (message) {
+
+
+        let htmlcode = "";
+        htmlcode += "<table style='margin-left:10px;margin-top:5px;padding:0px;border-collapse:collapse;'>"
+        for (let i = 0 ; i < message.length;i++) {
+            htmlcode += "<tr style='padding:0px;margin:0px'>"
+            for (let j = 0; j < message[0].length;j++) {
+                htmlcode += "<td style='margin-left:3px;padding:1px;border:solid white 1px'>"+message[i][j]+"</td>";
+            }
+            htmlcode += "<tr>"
+        }
+        htmlcode += "</table><br/>"
+        logger.innerHTML += htmlcode;
+
+        // logger.scrollTo(0,logger.scrollHeight);
+    }
+
     console.error = function (message) {
         if (typeof message == 'object') {
             logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';

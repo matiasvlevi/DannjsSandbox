@@ -14,6 +14,7 @@
 
         <!-- Scripts -->
         <script src="src/js/getcode.js"></script>
+        <script src="src/js/start.js"></script>
 
         <!-- style -->
         <link rel=stylesheet href="src/css/style.css">
@@ -25,22 +26,22 @@
         <div id="wrapper">
     		<div id="editor">
                 <textarea onchnage="runCode(getCode(editor))" id="editorText">
-//Create model
-const nn = new Dann(4,4);
-//Add Layers
-nn.addHiddenLayer(16,'leakyReLU');
-//Log
-nn.log();
-</textarea>
+// === Welcome to the Dannjs Sandbox! ===
+// 	    Quickly run dannjs tests
+//
+//	This library is under the MIT Licence
+//
+//
+// Here is a default model (1 input , 1 output):
+	new Dann().log();
+//
+// Documentation an be found here:
+//   https://github.com/matiasvlevi/Dann/wiki
+//
+// Github Repo:
+//   https://github.com/matiasvlevi/Dann/</textarea>
                 <script>
-                    var editor = CodeMirror.fromTextArea(document.getElementById("editorText"), {
-                      lineNumbers: true,
-                      mode: "javascript",
-                      theme:"material-darker",
-                      matchBrackets: true
-                    });
-                    document.querySelector("#editor > div > div:nth-child(1) > textarea").setAttribute('onchange',"runCode(getCode(editor))")
-                    runCode(getCode(editor))
+                    var editor = startEditor();
                 </script>
 
     		</div>
@@ -52,12 +53,26 @@ nn.log();
 
                 </div>
 
-
     		</div>
+                            <div class="bottom">
+
+                                <div class="presets">
+                                    <table>
+                                        <tr>
+                                            <td> <button type="button" class="presetbutton" name="button" onClick="XORtemplate()">XOR Neural Network</button> </td>
+                                            <td> <button type="button" class="presetbutton" name="button" onClick="dotprod()">Matrix<br/> Multiplication</button> </td>
+                                            <td><button type="button" class="presetbutton" name="button" onClick="sampleCode()">Simple Neural Network</button> </td>
+                                            <td> <button type="button" class="presetbutton" name="button" onClick="mnist()"> MNIST Deep Neural Network</button> </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                <div class="runbutton">
+                                    <button type="button" id="run" name="button" onClick="runCode(getCode(editor))">Run >>></button>
+                                </div>
+                            </div>
     	</div>
-        <div class="bottom">
-            <button type="button" id="run" name="button" onClick="runCode(getCode(editor))">Run >>></button>
-        </div>
+
 
     </body>
 </html>
