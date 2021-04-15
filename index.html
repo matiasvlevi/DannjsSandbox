@@ -21,7 +21,18 @@
         <title>Dannjs Sandbox</title>
     </head>
     <body>
+        <script type="text/javascript">
+        document.addEventListener('touchstart', this.touchstart);
+        document.addEventListener('touchmove', this.touchmove);
 
+        function touchstart(e) {
+        e.preventDefault()
+        }
+
+        function touchmove(e) {
+        e.preventDefault()
+        }
+        </script>
         <div id="wrapper">
     		<div id="editor">
                 <textarea onchnage="runCode(getCode(editor))" id="editorText">
