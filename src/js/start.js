@@ -118,3 +118,7 @@ function XORtemplate() {
 
     editor = startEditor(code);
 }
+
+function blank() {
+    editor = startEditor("");
+}

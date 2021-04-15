@@ -29,7 +29,7 @@
 // === Welcome to the Dannjs Sandbox! ===
 //
 //
-// 
+//
 // Here is a default model (1 input , 1 output):
 	new Dann().log();
 //
@@ -57,15 +57,20 @@
                             <div class="bottom">
 
                                 <div class="presets">
-                                    <table>
-                                        <tr>
-                                            <td> <button type="button" class="presetbutton" name="button" onClick="XORtemplate()">XOR Neural Network</button> </td>
-                                            <td> <button type="button" class="presetbutton" name="button" onClick="dotprod()">Matrix<br/> Multiplication</button> </td>
-                                            <td><button type="button" class="presetbutton" name="button" onClick="sampleCode()">Simple Neural Network</button> </td>
-                                            <td> <button type="button" class="presetbutton" name="button" onClick="mnist()"> MNIST Deep Neural Network</button> </td>
-                                        </tr>
 
-                                    </table>
+
+
+                                        <button type="button" class="presetbutton" name="button" onClick="XORtemplate()">XOR Neural Network</button>
+
+                                        <button type="button" class="presetbutton" name="button" onClick="dotprod()">Matrix<br/> Multiplication</button>
+
+                                        <button type="button" class="presetbutton" name="button" onClick="sampleCode()">Simple Neural Network</button>
+
+                                        <button type="button" class="presetbutton" name="button" onClick="mnist()"> MNIST Deep Neural Network</button>
+
+
+                                        <button type="button" class="presetbutton" name="button" onClick="blank()"> Blank</button>
+
                                 </div>
                                 <div class="runbutton">
                                     <button type="button" id="run" name="button" onClick="runCode(getCode(editor))">Run >>></button>

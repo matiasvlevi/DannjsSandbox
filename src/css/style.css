@@ -47,24 +47,32 @@ html, body {
     margin : 0px;
 
 }
+.buttondiv {
+    float:left;
+    width:20%;
+    height: 30%;
+    border: solid red;
+}
 .presetbutton {
     background-color: #383e56;
+    float:left;
+    width:20%;
+    height: 30%;
     outline:none;
     border:none;
     color:#f69e7b;
     display: table-cell;
     border-radius: 5px;
     border: none;
-    font-family: Console;
-    padding: 7px 16px;
+    padding: 6px 6px;
     text-align: center;
+    align-content: justify;
     text-decoration: none;
     display: inline-block;
     font-family: Consolas, Lucida Console, monospace;
     font-size: 12px;
-    position: relative;
-    left: 5%;
-    margin:2px;
+    margin:3px;
+
 }
 .presetbutton:hover {
     background-color: #2d3245;
