@@ -3,6 +3,7 @@ html, body {
     height:100%;
     width:100%;
     background-color: #2d3245;
+    overflow:hidden;
 }
 .bottom {
     height:20%;
@@ -15,9 +16,7 @@ html, body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
-html.touch body {
-    overflow:hidden;
-}
+
 #run {
     width:100%;
     height:100%;
