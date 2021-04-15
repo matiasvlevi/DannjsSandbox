@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- CodeMirror -->
+        <link rel=stylesheet href="codemirror/lib/codemirror.css">
+        <script src="codemirror/lib/codemirror.js"></script>
+        <link rel=stylesheet href="codemirror/material-darker.css">
+        <script src="codemirror/javascript.js"></script>
+
+        <!-- Dannjs -->
+        <script src="https://cdn.jsdelivr.net/gh/matiasvlevi/dann@master/build/dann.js"></script>
+
+        <!-- Scripts -->
+        <script src="src/js/getcode.js"></script>
+
+        <!-- style -->
+        <link rel=stylesheet href="src/css/style.css">
+
+        <title>Dannjs Sandbox</title>
+    </head>
+    <body>
+
+        <div id="wrapper">
+    		<div id="editor" >
+                <textarea onchnage="runCode(getCode(editor))" id="editorText">
+//Create model
+const nn = new Dann(4,4);
+//Add Layers
+nn.addHiddenLayer(16,'leakyReLU');
+//Log
+nn.log();
+</textarea>
+                <script>
+                    var editor = CodeMirror.fromTextArea(document.getElementById("editorText"), {
+                      lineNumbers: true,
+                      mode: "javascript",
+                      theme:"material-darker",
+                      matchBrackets: true
+                    });
+                    document.querySelector("#editor > div > div:nth-child(1) > textarea").setAttribute('onchange',"runCode(getCode(editor))")
+                </script>
+
+    		</div>
+    		<div id="console" >
+                <div class="consolehead">
+                    <h2 style="margin:5px">Console</h2>
+                </div>
+                <div id="log">
+
+                </div>
+
+
+    		</div>
+    	</div>
+
+        <button type="button" name="button" onClick="runCode(getCode(editor))">Run</button>
+    </body>
+</html>
