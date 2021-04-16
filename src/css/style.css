@@ -25,7 +25,7 @@ html, body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     width:90%;
-    height:80%;
+    height:95%;
     color: #f69e7b;
     font-size: 40px;
     background-color: #383e56;
@@ -33,8 +33,8 @@ html, body {
     outline: none;
     border-radius: 12px;
 
-    margin: 25px;
-    margin-top:2px;
+    margin: 5%;
+    margin-top:0px;
     font-family: Consolas, Lucida Console, monospace;
 }
 #run:hover {
@@ -64,7 +64,7 @@ html, body {
     border:none;
     color:#f69e7b;
     display: table-cell;
-    border-radius: 6px;
+    border-radius: 12px;
     border: none;
     padding: 2px 4px;
     text-align: center;
@@ -73,7 +73,8 @@ html, body {
     display: inline-block;
     font-family: Consolas, Lucida Console, monospace;
     font-size: 12px;
-    margin:2px;
+    margin-top:0px;
+    margin-left:1%;
 
 }
 .presetbutton:hover {
