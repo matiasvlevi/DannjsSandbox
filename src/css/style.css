@@ -18,12 +18,8 @@ html, body {
 }
 
 #run {
-    width:80%;
-    height:80%;
-    /* margin-left:10%;
-    margin-right:10%;
-    margin-top:5%;
-    margin-bottom:5%; */
+    width:90%;
+    height:62%;
     color: #f69e7b;
     font-size: 48px;
     background-color: #383e56;
