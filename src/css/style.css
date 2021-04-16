@@ -22,14 +22,14 @@ html, body {
     width:90%;
     height:80%;
     color: #f69e7b;
-    font-size: 42px;
+    font-size: 40px;
     background-color: #383e56;
     border: none;
     outline: none;
-    border-radius: 15px;
+    border-radius: 12px;
 
     margin: 25px;
-    margin-top:5px;
+    margin-top:2px;
     font-family: Consolas, Lucida Console, monospace;
 }
 #run:hover {
