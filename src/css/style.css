@@ -19,6 +19,11 @@ html, body {
 }
 
 #run {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
     width:90%;
     height:80%;
     color: #f69e7b;
@@ -46,6 +51,11 @@ html, body {
 }
 
 .presetbutton {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
     background-color: #383e56;
     float:left;
     width:18%;
