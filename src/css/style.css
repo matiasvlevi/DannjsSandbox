@@ -4,6 +4,7 @@ html, body {
     width:100%;
     background-color: #2d3245;
     overflow:hidden;
+    touch-action: none;
 }
 .bottom {
     height:10%;
@@ -53,7 +54,7 @@ html, body {
     border:none;
     color:#f69e7b;
     display: table-cell;
-    border-radius: 5px;
+    border-radius: 6px;
     border: none;
     padding: 4px 6px;
     text-align: center;
