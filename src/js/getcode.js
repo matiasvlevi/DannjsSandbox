@@ -1,4 +1,6 @@
-
+function tabMargin(tabs) {
+    return tabs*16;
+}
 const func = "(" + (function () {
     if (!console) {
         console = {};
@@ -8,7 +10,15 @@ const func = "(" + (function () {
 
     console.log = function (message) {
         if (typeof message == 'object') {
-            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
+            let list = prettify(message);
+            for (let i = 0; i < list.length; i++) {
+                let numTabs = countTabs(list[i])
+
+                let style = "style='margin-left:"+tabMargin(numTabs)+"px;margin-bottom:0px;margin-top:0px;'";
+
+                logger.innerHTML += "<p " + style + ">"+list[i] + "</p>"
+            }
+            //logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
         } else {
             if (typeof messgae == 'array') {
                 logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';

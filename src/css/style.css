@@ -122,10 +122,23 @@ html, body {
 #log {
     overflow-y: auto;
     overflow-x: hidden;
-    height:95%;
+    height:90%;
     margin-top: 10px;
-
     margin-left: 10px;
+}
+::-webkit-scrollbar {
+    /* display: none; */
+    width: 12px;
+    height: 12px;
+    /* color: var(--darkbackground); */
+}
+::-webkit-scrollbar-track {
+    /* display: none; */
+    background-color: #212121;
+}
+::-webkit-scrollbar-thumb {
+    /* display: none; */
+    background-color: #f69e7b;
 }
 #editor {
     width:60%;
