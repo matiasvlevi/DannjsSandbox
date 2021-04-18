@@ -12,7 +12,7 @@ const func = "(" + (function () {
         if (typeof message == 'object') {
             let list = prettify(message);
             for (let i = 0; i < list.length; i++) {
-                let numTabs = countTabs(list[i])
+                let numTabs = countChar(list[i],"\t")
 
                 let style = "style='margin-left:"+tabMargin(numTabs)+"px;margin-bottom:0px;margin-top:0px;'";
 
@@ -26,6 +26,15 @@ const func = "(" + (function () {
                 if (message.length <= 1) {
                     logger.innerHTML += '<br />';
                 } else {
+
+
+                    // let numTabs = countChar(message," ");
+                    // old(numTabs)
+                    // old(message)
+                    // let style = "style='margin-left:"+tabMargin(numTabs)+"px;margin-bottom:0px;margin-top:0px;'";
+                    //
+                    // logger.innerHTML += "<p class='logtext' " + style + ">"+message + "</p>"
+
                     logger.innerHTML += "<p class='logtext'>"+ message + '</p>';
                 }
 
