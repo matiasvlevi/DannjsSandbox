@@ -1,6 +1,9 @@
 function tabMargin(tabs) {
-    return tabs*16;
+    return tabs*16 + 5;
 }
+
+
+
 const func = "(" + (function () {
     if (!console) {
         console = {};
@@ -11,34 +14,26 @@ const func = "(" + (function () {
     console.log = function (message) {
         if (typeof message == 'object') {
             let list = prettify(message);
+            //old(list)
             for (let i = 0; i < list.length; i++) {
-                let numTabs = countChar(list[i],"\t")
-
+                let numTabs = countChar(list[i],"\t");
                 let style = "style='margin-left:"+tabMargin(numTabs)+"px;margin-bottom:0px;margin-top:0px;'";
-
-                logger.innerHTML += "<p " + style + ">"+list[i] + "</p>"
-            }
-            //logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
-        } else {
-            if (typeof messgae == 'array') {
-                logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
-            } else {
-                if (message.length <= 1) {
-                    logger.innerHTML += '<br />';
-                } else {
-
-
-                    // let numTabs = countChar(message," ");
-                    // old(numTabs)
-                    // old(message)
-                    // let style = "style='margin-left:"+tabMargin(numTabs)+"px;margin-bottom:0px;margin-top:0px;'";
-                    //
-                    // logger.innerHTML += "<p class='logtext' " + style + ">"+message + "</p>"
-
-                    logger.innerHTML += "<p class='logtext'>"+ message + '</p>';
+                let name = "";
+                if (message.constructor.name !== "Object" && message.constructor.name !== "Array" &&  i == 0) {
+                    name = message.constructor.name;
                 }
 
+                logger.innerHTML += "<p " + style + ">"+name+' '+list[i] + "</p>"
+                
+
+                
             }
+        } else {
+            if (message.length <= 1) {
+                logger.innerHTML += '<br />';
+            } else { 
+                logger.innerHTML += "<p class='logtext'>"+ message + '</p>';
+            } 
         }
 
         logger.scrollTo(0,logger.scrollHeight);
