@@ -12,6 +12,10 @@
 
 <br/><br/>
 
+
+#### Report Bugs
+[Issues](https://github.com/matiasvlevi/DannjsSandbox/issues)
+
 ---
 
 The editor is temporarily hosted here in the github repo. Will move to website soon.
