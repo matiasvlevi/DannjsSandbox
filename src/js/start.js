@@ -57,6 +57,10 @@ function mnist() {
     + "\n"
     + "// Neural Network's info\n"
     + "nn.log();\n"
+    + "\n"
+
+    + "// See an MNIST model in action: \n"
+    + "//   https://github.com/matiasvlevi/MnistDannjs"
 
     editor = startEditor(code);
 }
