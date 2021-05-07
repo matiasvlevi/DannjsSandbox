@@ -88,7 +88,7 @@ function dotprod(){
     + "b.log({table:true})\n"
     + "\n"
     + "// Dot product\n"
-    + "const c = Matrix.multiply(a,b);\n"
+    + "const c = Matrix.mult(a,b);\n"
     + "console.log('a*b matrix:')\n"
     + "c.log({table:true})\n"
 
