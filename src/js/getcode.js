@@ -22,17 +22,17 @@ const func = "(" + (function () {
                 if (message.constructor.name !== "Object" && message.constructor.name !== "Array" &&  i == 0) {
                     name = message.constructor.name;
                 }
-
-                logger.innerHTML += "<p " + style + ">"+name+' '+list[i] + "</p>"
-                
-
-                
+                logger.innerHTML += "<p " + style + "> "+name+' '+list[i] + "</p>"
             }
         } else {
             if (message.length <= 1) {
                 logger.innerHTML += '<br />';
             } else { 
-                logger.innerHTML += "<p class='logtext'>"+ message + '</p>';
+                let elem = document.createElement('p');
+                elem.setAttribute('class', 'logtext');
+                elem.innerText = message;
+                document.querySelector("#log").appendChild(elem);
+                //logger.innerHTML += "<p class='logtext'>"+ message + '</p>';
             } 
         }
 
