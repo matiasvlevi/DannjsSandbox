@@ -18,25 +18,7 @@ html, body {
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-#run {
-    user-select: none; /* supported by Chrome and Opera */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    width:90%;
-    height:95%;
-    color: #f69e7b;
-    font-size: 40px;
-    background-color: #383e56;
-    border: none;
-    outline: none;
-    border-radius: 12px;
 
-    margin: 5%;
-    margin-top:0px;
-    font-family: Consolas, Lucida Console, monospace;
-}
 #run:hover {
 
     background-color: #2d3245;
@@ -49,7 +31,26 @@ html, body {
     margin : 0px;
 
 }
-
+#editor {
+    width:60%;
+    height:100%;
+    margin : 0;
+    float : left ;
+}
+#console {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width:40%;
+    height:100%;
+    border-left: 1px solid #333;
+    margin : 0;
+    float : left ;
+    color: #fff;
+    font-size: 12px !important;
+    font-family: Consolas, Lucida Console, monospace;
+    background-color: #212121;
+}
 .presetbutton {
     user-select: none; /* supported by Chrome and Opera */
     -webkit-user-select: none; /* Safari */
@@ -75,8 +76,92 @@ html, body {
     font-size: 12px;
     margin-top:0px;
     margin-left:1%;
-
 }
+#run {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    width:90%;
+    height:95%;
+    color: #f69e7b;
+    font-size: 40px;
+    background-color: #383e56;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+
+    margin: 5%;
+    margin-top:0px;
+    font-family: Consolas, Lucida Console, monospace;
+}
+@media (max-width: 800px) {
+    #editor {
+        width:100%;
+        height:50%;
+        margin : 0;
+    }
+    #console {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        width:100%;
+        height:50%;
+        border-left: 1px solid #333;
+        margin : 0;
+        color: #fff;
+        font-size: 12px !important;
+        font-family: Consolas, Lucida Console, monospace;
+        background-color: #212121;
+    }
+    .presetbutton {
+        user-select: none; /* supported by Chrome and Opera */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        background-color: #383e56;
+        float:left;
+        width:18%;
+        height: 95%;
+        outline:none;
+        border:none;
+        color:#f69e7b;
+        display: table-cell;
+        border-radius: 12px;
+        border: none;
+        padding: 2px 4px;
+        text-align: center;
+        align-content: justify;
+        text-decoration: none;
+        display: inline-block;
+        font-family: Consolas, Lucida Console, monospace;
+        font-size: 8px;
+        margin-top:0px;
+        margin-left:1%;
+    }
+    #run {
+        user-select: none; /* supported by Chrome and Opera */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        width:90%;
+        height:95%;
+        color: #f69e7b;
+        font-size: 20px;
+        background-color: #383e56;
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        
+        margin: 5%;
+        margin-top:0px;
+        font-family: Consolas, Lucida Console, monospace;
+    }
+}
+
 .presetbutton:hover {
     background-color: #2d3245;
 
@@ -139,24 +224,4 @@ html, body {
 ::-webkit-scrollbar-thumb {
     /* display: none; */
     background-color: #f69e7b;
-}
-#editor {
-    width:60%;
-    height:100%;
-    margin : 0;
-    float : left ;
-}
-#console {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    width:40%;
-    height:100%;
-    border-left: 1px solid #333;
-    margin : 0;
-    float : left ;
-    color: #fff;
-    font-size: 12px !important;
-    font-family: Consolas, Lucida Console, monospace;
-    background-color: #212121;
 }
