@@ -1,23 +1,4 @@
-function request(url,c) {
-    const Http = new XMLHttpRequest();
-    Http.open("GET", url);
-    Http.send();
 
-    Http.onreadystatechange = (e) => {
-
-        c(Http.responseText)
-
-
-    }
-}
-request('https://api.github.com/repos/matiasvlevi/dann/releases/latest',(data)=>{
-    let version = JSON.parse(data).name;
-    if (document.getElementById('version').textContent == "Dannjs") {
-        let curr = document.getElementById('version').textContent;
-        document.getElementById('version').textContent = curr + " " + version;
-    }
-
-})
 
 function startEditor(text) {
     if (text !== undefined) {
